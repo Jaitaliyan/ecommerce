@@ -26,7 +26,7 @@ def updateTask(request, pk):
 
 	form = TaskForm(instance=task)
 
-	if request.method == 'POST':
+	if request.method == 'GET':
 		form = TaskForm(request.POST, instance=task)
 		if form.is_valid():
 			form.save()
